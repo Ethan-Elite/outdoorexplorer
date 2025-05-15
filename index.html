@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>户外探险轨迹同步</title>
+    <link href="https://webapi.amap.com/maps?v=2.0&key=您的高德地图Web端Key" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>户外探险轨迹同步</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="scanner-section">
+                <h2>扫描手机二维码</h2>
+                <div class="scanner-container">
+                    <video id="scanner-view" playsinline></video>
+                    <p id="scan-result">准备扫描...</p>
+                </div>
+                <button id="start-scan-btn" class="btn">开始扫描</button>
+                <button id="stop-scan-btn" class="btn" disabled>停止扫描</button>
+            </div>
+            
+            <div class="map-section">
+                <h2>轨迹地图</h2>
+                <div id="map-container"></div>
+                <div class="track-info">
+                    <p>轨迹ID: <span id="track-id">-</span></p>
+                    <p>开始时间: <span id="start-time">-</span></p>
+                    <p>结束时间: <span id="end-time">-</span></p>
+                    <p>点数: <span id="points-count">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://webapi.amap.com/maps?v=2.0&key=您的高德地图Web端Key"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@zxing/library@latest"></script>
+    <script src="/js/qr-scanner.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
