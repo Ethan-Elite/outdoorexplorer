@@ -16,6 +16,7 @@ function initQRScanner() {
     const resultElement = document.getElementById('scan-result');
     const startBtn = document.getElementById('start-scan-btn');
     const stopBtn = document.getElementById('stop-scan-btn');
+    const fileInput = document.getElementById('file-input');
     
     const scanner = new QRScanner(videoElement, resultElement);
     
@@ -30,6 +31,13 @@ function initQRScanner() {
         startBtn.disabled = false;
         stopBtn.disabled = true;
         resultElement.textContent = '扫描已停止';
+    });
+    
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            scanner.scanFile(file);
+        }
     });
     
     // 处理扫描结果
