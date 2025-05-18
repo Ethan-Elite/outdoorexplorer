@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>户外探险轨迹同步</title>
-    <link href="https://webapi.amap.com/maps?v=2.0&key=您的高德地图Web端Key" rel="stylesheet">
+    <link href="https://webapi.amap.com/maps?v=2.0&key=dfe731fbf1384ade8ef05af0cdefed51" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +22,7 @@
                 </div>
                 <button id="start-scan-btn" class="btn">开始扫描</button>
                 <button id="stop-scan-btn" class="btn" disabled>停止扫描</button>
+                <input type="file" id="file-input" accept="image/*">
             </div>
             
             <div class="map-section">
@@ -37,8 +38,8 @@
         </div>
     </div>
 
-    <script src="https://webapi.amap.com/maps?v=2.0&key=您的高德地图Web端Key"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@zxing/library@latest"></script>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=dfe731fbf1384ade8ef05af0cdefed51"></script>
+    <script src="/js/jsQR.js"></script>
     <script src="/js/qr-scanner.js"></script>
     <script src="/js/app.js"></script>
 </body>
